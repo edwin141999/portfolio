@@ -12,3 +12,15 @@ body {
   border-style: solid;
   border-image: linear-gradient(to right, #fb7185, rgb(217 70 239 / 1), rgb(99 102 241 / 1)) 1;
 }
+
+.hoverborder{
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.hoverborder:hover{
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #fb7185, rgb(217 70 239 / 1), rgb(99 102 241 / 1)) 1;
+}
