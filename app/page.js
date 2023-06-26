@@ -7,7 +7,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col items-center justify-between py-5">
       <Header />
       <About />
-      <section className="flex flex-col px-20 py-5 min-h-screen">
+      <section className="flex flex-col px-40 py-5 min-h-screen">
         <h2 className="text-4xl font-bold text-center">PROJECTS</h2>
         <div className="flex flex-row">
           <div className="flex flex-col">
@@ -22,7 +22,9 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <Image src="/spiderman.jpg" width={200} height={200} alt="project image" />
+          <div style={{position: "relative", width:'700px', height: '350px'}}>
+          <Image src="/spiderman.jpg" fill alt="project image" sizes="100vw" style={{objectFit: 'contain'}}/>
+          </div>
         </div>
       </section>
       <footer>
