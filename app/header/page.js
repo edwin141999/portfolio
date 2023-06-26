@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="w-full h-screen flex flex-col justify-center px-24">
+    <header className="w-full h-screen flex flex-col justify-center px-24 pt-5">
       <nav className="flex-1">
         <ul className="flex flex-row font-semibold w-auto gap-10 cursor-pointer">
           <li>About</li>
