@@ -1,9 +1,9 @@
-import Image from "next/image";
 import BtnRainbow from "../components/btnRainbow";
+import ImageSize from "../components/imageSize";
 
 export default function Projects() {
   return (
-    <section className="flex flex-col py-5 min-h-screen space-y-10">
+    <section className="flex flex-col py-10 min-h-screen space-y-10" id="projects">
       <h2 className="text-4xl font-bold text-center">PROJECTS</h2>
       {/* PROJECT 1 */}
       <div className="flex flex-row justify-center">
@@ -17,9 +17,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div style={{ position: "relative", width: '700px', height: '350px' }} className="drop-shadow-2xl">
-          <Image src="/2099.jpg" fill quality={100} alt="project image" sizes="100vh" style={{ objectFit: 'cover' }} />
-        </div>
+        <ImageSize src={'/2099.jpg'} alt={'project image'} width={'700px'} height={'350px'} className={'drop-shadow-2xl'} />
       </div>
       {/* PROJECT 2 */}
       <div className="flex flex-row justify-center">
@@ -33,9 +31,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div style={{ position: "relative", width: '700px', height: '350px' }} className="drop-shadow-2xl">
-          <Image src="/2099.jpg" fill quality={100} alt="project image" sizes="100vh" style={{ objectFit: 'cover' }} />
-        </div>
+        <ImageSize src={'/2099.jpg'} alt={'project image'} width={'700px'} height={'350px'} className={'drop-shadow-2xl'} />
       </div>
     </section>
   )
