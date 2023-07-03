@@ -24,3 +24,35 @@ body {
   border-style: solid;
   border-image: linear-gradient(to right, #fb7185, rgb(217 70 239 / 1), rgb(99 102 241 / 1)) 1;
 }
+
+.imageabout{
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.imageprojects{
+  position: relative;
+  width: 700px;
+  height: 350px;
+}
+
+@media (max-width: 640px) {
+  .hoverborder {
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #fb7185, rgb(217 70 239 / 1), rgb(99 102 241 / 1)) 1;
+  }
+
+  .imageabout{
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  .imageprojects{
+    position: relative;
+    width: 250px;
+    height: 200px;
+  }
+}
