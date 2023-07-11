@@ -13,7 +13,7 @@ export default function Footer() {
         <p className="font-semibold">Message</p>
         <textarea
           type="text"
-          className="border-2 rounded-md px-2 py-1 resize-none drop-shadow-md"
+          className="border-2 rounded-md px-2 py-1 resize-none drop-shadow-md dark:bg-white"
           rows={3}
           placeholder="Enter your message"
         />

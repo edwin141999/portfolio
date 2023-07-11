@@ -7,6 +7,10 @@ body {
   color: black;
 }
 
+body *{
+  @apply transition-colors duration-200;
+}
+
 .borderbtn {
   border-width: 2px;
   border-style: solid;

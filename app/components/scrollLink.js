@@ -12,6 +12,6 @@ export default function ScrollLink({ href, text }) {
   }
 
   return (
-    <Link href={`${href}`} onClick={handleScroll} className="cursor-pointer">{text}</Link>
+    <Link href={`${href}`} onClick={handleScroll} className="cursor-pointer dark:text-white">{text}</Link>
   )
 }

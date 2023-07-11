@@ -19,7 +19,7 @@ export default function Projects() {
   ]
 
   return (
-    <section className="flex flex-col py-10 min-h-screen space-y-10" id="projects">
+    <section className="flex flex-col py-10 min-h-screen space-y-10 bg-white dark:bg-slate-900 dark:text-white" id="projects" >
       <h2 className="text-4xl font-bold text-center">PROJECTS</h2>
       {PROJECTS.map((project, index) => {
         return (
