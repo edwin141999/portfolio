@@ -8,14 +8,17 @@ export default function Projects() {
   const [isLoading, setIsLoading] = useState(true)
 
   const SKILLS = [
-    { image: '/skills/html.png', name: 'HTML' },
-    { image: '/skills/css.png', name: 'CSS' },
-    { image: '/skills/javascript.png', name: 'JavaScript' },
-    // { image: '/skills/react.png', name: 'React.js' },
-    { image: '/skills/tailwind.png', name: 'Tailwind CSS' },
-    { image: '/skills/react_native.png', name: 'React Native' },
-    { image: '/skills/expo.png', name: 'Expo' },
-    { image: '/skills/vite_js.png', name: 'Vite.js' },
+    { image: '/skills/html.svg', name: 'HTML' },
+    { image: '/skills/css.svg', name: 'CSS' },
+    { image: '/skills/javascript.svg', name: 'JavaScript' },
+    { image: '/skills/react.svg', name: 'React.js' },
+    { image: '/skills/tailwind.svg', name: 'Tailwind CSS' },
+    { image: '/skills/react.svg', name: 'React Native' },
+    { image: '/skills/expo.svg', name: 'Expo' },
+    { image: '/skills/vite.svg', name: 'Vite.js' },
+    { image: '/skills/flutter.svg', name: 'Flutter' },
+    { image: '/skills/dart.svg', name: 'Dart' },
+    { image: '/skills/aws.svg', name: 'AWS' },
   ]
 
   useEffect(() => {
@@ -28,8 +31,12 @@ export default function Projects() {
   }, [])
 
   if (isLoading) return (
-    <div className="flex flex-col py-10 min-h-screen space-y-10 bg-white dark:bg-slate-900 dark:text-white justify-center">
-      <h1 className="text-6xl font-bold">Loading...</h1>
+    <div className="flex flex-col py-10 min-h-screen space-y-10 bg-white dark:bg-slate-900 dark:text-white justify-center text-center w-screen">
+      <div className="flex flex-row justify-center items-center gap-10">
+        <svg className="animate-spin h-10 w-10 mr-3 bg-transparent rounded-full border-4 border-transparent border-opacity-50" style={{ borderRightColor: "white" }} viewBox="0 0 24 24">
+        </svg>
+        <h1 className="text-6xl font-bold">Loading...</h1>
+      </div>
     </div>
   )
 
@@ -40,34 +47,29 @@ export default function Projects() {
         return (
           <div className="flex flex-col md:flex-row justify-center items-center md:items-start" key={project.id}>
             <div className="flex flex-col w-2/3 md:w-auto basis-1/3 mx-5 my-5 md:my-0">
-              {/* TDOO: Agregar titulos */}
               <h4 className="text-xl font-bold py-2 md:py-0">{project.title}</h4>
               <div className="flex-1 flex flex-col justify-center space-y-4 md:mt-5">
-                {/* TODO: Agregar descripciones */}
                 <p className="font-medium">{project.description}</p>
-                <div className="flex gap-5 overflow-x-auto scroll-pl-6">
+                <div className="flex gap-10 overflow-auto scroll-pl-6 mx-auto md:mx-0">
                   {project.skills.map((skill) => {
                     return (
                       SKILLS.map((skillname) => {
                         if (skillname.name === skill) {
-                          // TODO: Fix the image size
                           return (
-                            // <ImageSize key={skill} src={skillname.image} alt={'skill image'} className={'imageskills'} />
-                            <Image src={skillname.image} height={50} width={50} alt={'skill'} sizes="100vh" style={{ objectFit: 'cover' }} key={skill}  />
+                            <Image src={skillname.image} height={50} width={50} alt={'skill'} style={{ objectFit: 'contain' }} key={skill} />
                           )
                         }
                       })
                     )
                   })}
                 </div>
-                {/* TODO: Verificar si hay link de proyecto */}
                 <div className="flex flex-row text-sm font-bold space-x-3 justify-center md:justify-start">
-                  <BtnRainbow border={'hoverborder'} text={'Ver proyecto'} link={project.linkproject} />
+                  {project.linkproject !== '' && <BtnRainbow border={'hoverborder'} text={'Ver proyecto'} link={project.linkproject} />}
                   <BtnRainbow border={'hoverborder'} text={'Codigo fuente'} link={project.linkgithub} />
                 </div>
               </div>
             </div>
-            <ImageSize src={project.image} alt={'project image'} className={'drop-shadow-2xl imageprojects'} />
+            <ImageSize src={project.image} alt={'project image'} className={'drop-shadow-2xl imageprojects'} typeFit={'contain'} />
           </div>
         )
       })}
