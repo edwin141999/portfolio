@@ -5,12 +5,11 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: '*'
-      },
-      {
-        protocol: 'http',
-        hostname: 'placehold.it'
       }
     ]
+  },
+  env:{
+    KEY_API_CONTACT_FORM: process.env.KEY_API_CONTACT_FORM
   }
 }
 
