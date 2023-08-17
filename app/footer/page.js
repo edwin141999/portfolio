@@ -49,14 +49,14 @@ export default function Footer() {
             placeholder="Introduce tu mensaje"
             name="message"
           />
-          <div className="m-auto pt-6 pb-2">
+          <div className="pt-6 pb-2">
             {isLoader ? (
               <div className="borderbtn py-1 px-6">
                 <svg className="animate-spin w-6 h-6 bg-transparent rounded-full border-4 border-transparent border-opacity-50" style={{ borderRightColor: "black" }} viewBox="0 0 24 24">
                 </svg>
               </div>
             ) : (
-              <BtnRainbow border={'py-1 px-14 borderbtn font-semibold'} text={'Enviar'} />
+                <BtnRainbow border={'py-1 px-0 w-full borderbtn font-semibold'} text={'Enviar'} />
             )}
           </div>
         </form>

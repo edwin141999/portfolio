@@ -54,7 +54,7 @@ export default function Header() {
       </nav>
       <section className="font-bold text-4xl md:text-6xl space-y-4 cursor-default dark:text-white flex flex-col h-screen justify-center">
         <p>Hola, mi nombre es <span className="bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 text-transparent bg-clip-text">Edwin</span></p>
-        <p className="md:w-2/3">Soy Ingeniero en Desarrollo de Software</p>
+        <p className="md:w-2/3 leading-none md:leading-tight">Soy Ingeniero en Desarrollo de Software</p>
         <div>
           <BtnRainbow border={'borderbtn text-lg md:text-2xl px-5'} text={'Conocer más'} onClick={handleScroll} />
         </div>
