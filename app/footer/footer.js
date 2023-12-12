@@ -16,8 +16,7 @@ export default function Footer() {
 
     console.log(process.env.KEY_API_CONTACT_FORM);
 
-    // formData.append('access_key', process.env.KEY_API_CONTACT_FORM);
-    formData.append('access_key', 'c34b04e8-7375-4f31-9b12-5036f7776dcc');
+    formData.append('access_key', process.env.KEY_API_CONTACT_FORM);
 
     const object = Object.fromEntries(formData);
     console.log(object);
