@@ -14,9 +14,9 @@ export default function Footer() {
     setIsLoader(true)
     const formData = new FormData(e.target);
 
-    console.log(process.env.KEY_API_CONTACT_FORM);
+    console.log(process.env.NEXT_PUBLIC_KEY_API_CONTACT_FORM);
 
-    formData.append('access_key', process.env.KEY_API_CONTACT_FORM);
+    formData.append('access_key', process.env.NEXT_PUBLIC_KEY_API_CONTACT_FORM);
 
     const object = Object.fromEntries(formData);
     console.log(object);
