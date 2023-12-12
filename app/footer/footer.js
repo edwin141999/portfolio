@@ -14,12 +14,10 @@ export default function Footer() {
     setIsLoader(true)
     const formData = new FormData(e.target);
 
-    console.log(process.env.NEXT_PUBLIC_KEY_API_CONTACT_FORM);
 
     formData.append('access_key', process.env.NEXT_PUBLIC_KEY_API_CONTACT_FORM);
 
     const object = Object.fromEntries(formData);
-    console.log(object);
     const json = JSON.stringify(object);
 
     const response = await fetch('https://api.web3forms.com/submit', {
@@ -57,7 +55,7 @@ export default function Footer() {
           />
           <div className="pt-6 pb-2">
             {isLoader ? (
-              <div className="borderbtn py-1 px-6">
+              <div className="borderbtn py-1 px-6 flex justify-center">
                 <svg className="animate-spin w-6 h-6 bg-transparent rounded-full border-4 border-transparent border-opacity-50" style={{ borderRightColor: "black" }} viewBox="0 0 24 24">
                 </svg>
               </div>
