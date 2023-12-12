@@ -17,11 +17,15 @@ export default function Footer() {
     formData.append('access_key', process.env.KEY_API_CONTACT_FORM);
 
     const object = Object.fromEntries(formData);
+    console.log(object);
     const json = JSON.stringify(object);
 
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', "Accept": "application/json" },
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: "application/json"
+      },
       body: json
     })
 
@@ -56,7 +60,7 @@ export default function Footer() {
                 </svg>
               </div>
             ) : (
-                <BtnRainbow border={'py-1 px-0 w-full borderbtn font-semibold'} text={'Enviar'} />
+              <BtnRainbow border={'py-1 px-0 w-full borderbtn font-semibold'} text={'Enviar'} />
             )}
           </div>
         </form>

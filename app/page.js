@@ -1,9 +1,9 @@
 'use client'
 import { ThemeProvider } from "next-themes";
-import About from "./about/page";
-import Footer from "./footer/page";
-import Header from "./header/page";
-import Projects from "./sections/page";
+import About from "./about/about";
+import Footer from "./footer/footer";
+import Header from "./header/header";
+import Projects from "./sections/sections";
 
 export default function Home() {
   return (
