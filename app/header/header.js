@@ -23,18 +23,18 @@ export default function Header() {
     if (!mounted) return null
     if (theme === 'dark') {
       return (
-        <div className="flex text-yellow-500 gap-5 border-2 border-yellow-500  px-2 py-1 rounded-md" role="button" onClick={() => setTheme('light')}>
-          <p className="hidden md:flex">Modo Claro</p>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+        <div className="flex text-yellow-500 gap-5 border-2 border-yellow-500 px-2 py-1 rounded-md md:w-44 md:justify-between group hover:bg-yellow-500" role="button" onClick={() => setTheme('light')}>
+          <p className="hidden md:flex group-hover:text-white">Modo Claro</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 group-hover:text-white">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
           </svg>
         </div>
       )
     } else {
       return (
-        <div className="flex text-gray-900 gap-5 border-2 border-gray-900 px-2 py-1 rounded-md" role="button" onClick={() => setTheme('dark')} >
-          <p className="hidden md:flex">Modo Oscuro</p>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+        <div className="flex text-gray-900 gap-5 border-2 border-gray-900 px-2 py-1 rounded-md md:w-44 md:justify-between group hover:bg-black" role="button" onClick={() => setTheme('dark')} >
+          <p className="hidden md:flex group-hover:text-white">Modo Oscuro</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 group-hover:text-white">
             <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
           </svg>
         </div>
@@ -43,8 +43,8 @@ export default function Header() {
   }
 
   return (
-    <header className="w-full h-screen flex flex-col px-10 md:px-24 pt-5 bg-white dark:bg-slate-900">
-      <nav className="flex flex-row items-center justify-around md:justify-between">
+    <header className="w-full h-screen flex flex-col bg-gray-200 dark:bg-slate-900 ">
+      <nav className="flex flex-row items-center justify-around md:justify-between w-screen px-10 md:px-24 fixed py-5 z-50" id="header-nav">
         <ul className="flex flex-row flex-1 md:flex-none md:gap-10 font-semibold justify-around">
           <ScrollLink href={'#about'} text={'Sobre mi'} />
           <ScrollLink href={'#projects'} text={'Proyectos'} />
@@ -52,11 +52,16 @@ export default function Header() {
         </ul>
         {renderThemeChanger()}
       </nav>
-      <section className="font-bold text-4xl md:text-6xl space-y-4 cursor-default dark:text-white flex flex-col h-screen justify-center">
-        <p>Hola, mi nombre es <span className="bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 text-transparent bg-clip-text">Edwin</span></p>
-        <p className="md:w-2/3 leading-none md:leading-tight">Soy Ingeniero en Desarrollo de Software</p>
+      <section className="font-bold text-4xl md:text-6xl space-y-4 cursor-default dark:text-white flex flex-col h-screen justify-center px-10 md:px-24">
+        <p>Hola, mi nombre es <span className="bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 text-transparent bg-clip-text ">Edwin</span></p>
+        <p className="md:w-2/3 leading-none md:leading-tight ">Soy Ingeniero en Desarrollo de Software</p>
         <div>
-          <BtnRainbow border={'borderbtn text-lg md:text-2xl px-5'} text={'Conocer más'} onClick={handleScroll} />
+          <BtnRainbow
+            border={'borderbtn text-lg md:text-2xl px-5 group hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500'}
+            text={'Conóceme'}
+            onClick={handleScroll}
+            spanClass={'flex justify-center group-hover:text-white'}
+          />
         </div>
       </section>
     </header>
