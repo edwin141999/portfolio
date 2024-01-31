@@ -34,7 +34,7 @@ export default function Projects() {
   return (
     <>
       <h2 className="text-4xl font-bold text-center bg-gray-200 dark:bg-slate-900 dark:text-white w-full pt-10 tracking-widest" id="projects">PROYECTOS</h2>
-      <section className="grid grid-cols-2 md:grid-cols-10 auto-rows-[25rem] gap-10 w-full min-h-screen mx-auto p-20 bg-gray-200 dark:bg-slate-900 dark:text-white">
+      <section className="grid grid-cols-2 md:grid-cols-10 auto-rows-[25rem] md:gap-12 2xl:gap-x-24 w-full min-h-screen mx-auto p-20 bg-gray-200 dark:bg-slate-900 dark:text-white">
         {projects.map((project) => {
           return (
             <GridItem

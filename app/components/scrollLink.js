@@ -15,7 +15,7 @@ export default function ScrollLink({ href, text }) {
     <Link
       href={`${href}`}
       onClick={handleScroll}
-      className="cursor-pointer hover:text-indigo-500 dark:text-white dark:hover:text-yellow-500"
+      className="cursor-pointer hover:text-indigo-500 dark:text-white dark:hover:text-yellow-500 duration-500"
     >
       {text}
     </Link>
