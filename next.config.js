@@ -9,7 +9,7 @@ const nextConfig = {
     ]
   },
   env:{
-    KEY_API_CONTACT_FORM: process.env.KEY_API_CONTACT_FORM
+    NEXT_PUBLIC_KEY_API_CONTACT_FORM: process.env.NEXT_PUBLIC_KEY_API_CONTACT_FORM
   }
 }
 
