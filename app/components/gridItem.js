@@ -8,12 +8,10 @@ export default function GridItem({ title, description, img, skills, linkproject,
     { image: '/skills/javascript.svg', name: 'JavaScript' },
     { image: '/skills/react.svg', name: 'React.js' },
     { image: '/skills/tailwind.svg', name: 'Tailwind CSS' },
-    { image: '/skills/react.svg', name: 'React Native' },
-    { image: '/skills/expo.svg', name: 'Expo' },
     { image: '/skills/vite.svg', name: 'Vite.js' },
-    { image: '/skills/flutter.svg', name: 'Flutter' },
-    { image: '/skills/dart.svg', name: 'Dart' },
-    { image: '/skills/aws.svg', name: 'AWS' },
+    { image: '/skills/next.svg', name: 'Next.js' },
+    { image: '/skills/typescript.svg', name: 'TypeScript' },
+    { image: '/skills/react-redux.svg', name: 'React-Redux' },
   ]
 
   const clickHover = (id) => {
