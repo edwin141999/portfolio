@@ -30,7 +30,7 @@ export default function GridItem({ title, description, img, skills, linkproject,
 
   return (
     <article
-      className={`relative rounded-xl backdrop-blur-md border-black/10 shadow-inner shadow-white/10 overflow-hidden group hover:scale-110 duration-500 transition-transform ${className}`}
+      className={`relative rounded-xl backdrop-blur-md border-black/10 shadow-sm shadow-white/10 overflow-hidden group hover:scale-110 duration-500 transition-transform ${className}`}
       id={`article-hover-${keyNumber}`}
       onClick={() => clickInfo(keyNumber)}
     >
@@ -44,7 +44,7 @@ export default function GridItem({ title, description, img, skills, linkproject,
         id={`div-info-${keyNumber}`}
       >
         <h2 className="font-semibold text-xl md:text-3xl text-white mb-4">{title}</h2>
-        <h3 className="text-xs md:text-lg text-white text-pretty">{description}</h3>
+        <h3 className="text-xs md:text-md lg:text-lg text-white text-pretty">{description}</h3>
         <div className="grid grid-cols-3 md:flex gap-5 md:overflow-auto scroll-pl-6 mx-auto md:mx-0">
           {skills.map((skill) => {
             return (
